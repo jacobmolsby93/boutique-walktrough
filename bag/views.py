@@ -22,5 +22,4 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
     
     request.session['bag'] = bag # Updates the bag varible to the updated version.
-    print(request.session['bag'])
     return redirect(redirect_url)
