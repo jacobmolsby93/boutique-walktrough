@@ -17,7 +17,7 @@ class OrderForm(forms.ModelForm):
         """
 
         super().__init__(*args, **kwargs)  # call default init form method to set the form up as like default
-        placeholder = {  # a dict of placeholders which will show up in the form field 
+        placeholders = {  # a dict of placeholders which will show up in the form field 
             'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
@@ -36,5 +36,5 @@ class OrderForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder  # setting all the values to the placeholder dict above
-            self.fields[field].wdiget.attrs['class'] = 'stripe-style-input'  # adding a css class 
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'  # adding a css class 
             self.fields[field].label = False  # removing the form field labels
