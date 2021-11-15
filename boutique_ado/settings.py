@@ -175,7 +175,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Where all upploaded media files will go
 
-if 'USE_AWS' in or.environ:
+if 'USE_AWS' in os.environ:
     # Bucket Config 
     AWS_STORAGE_BUCKET_NAME = 'boutique-ado-2'
     AWS_S3_REGION_NAME = 'ap-southeast-1'
